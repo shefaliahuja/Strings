@@ -1,0 +1,25 @@
+My solution
+
+class Solution:
+    # User function Template for python3
+    
+    def reverseWords(self,S):
+        a = [];
+        a = S.split(".");
+        m = a[len(a)-1];
+        
+        for i in range(len(a)-2,-1,-1):
+            m = m + "."+ a[i];
+        return(m);
+        # code here 
+pehele maine m me last word store nahi kiya tha. Btaao usse kya galti hogi?
+Usse ye galti hui ki : hello.hello print hora tha hello.hello. 
+toh humne pehele last store hi krke full stop beech me laaya aur len-2 se chalaya
+
+Ab optimised solution:
+  do pointers lelo start and end
+while(start<end)
+  s[start] s[end] = s[end] s[start];
+  start = start + 1;
+  end = end - 1;
+  
